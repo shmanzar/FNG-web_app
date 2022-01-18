@@ -1,0 +1,62 @@
+
+
+.wrapper {
+  height: 30vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-wrapper {
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15vh;
+}
+
+.typing-demo {
+  white-space: wrap;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+input[type=text] {
+  font-size: 1.5vw;
+  font-family: monospace;
+  border: none;
+  outline: none;
+  background-color: #3CBC8D;
+  color: white;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+input[type=text]:focus {
+  font-size: 1.5vw;
+  font-family: monospace;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(4, 128, 121);
+  width: 100%;
+}
+
+input[type=submit] {
+  margin-left: 25%;
+  margin-top: 40px;
+  width: 50%;
+  border: none;
+  border-radius: 1px;
+  font-size: 1.5vw;
+  padding: 10px 32px;
+  transition-duration: 0.4s;
+  font-family: 'Share Tech Mono', sans-serif;
+}
+
+input[type=submit]:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

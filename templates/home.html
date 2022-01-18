@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="{{ url_for('static', filename='node_modules/typed.js/lib/typed.js') }}"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+        
+
+        <meta charset="utf-8" />
+        <title>Hello, Jeanie</title>
+    </head>
+    <body>
+        <div class="element">
+        </div>
+        <div class="wrapper">
+            <div class = "typing-demo">
+                <div id="typed-strings">
+                    <p>&nbspEnter ^100 your ^100 head^100line:</p>
+                </div>
+                <span id="typed"></span>
+                
+            </div>
+        </div>
+        <div class="user-wrapper">
+        <form action="" method="get" id = "news">
+            <input type="text" name="headline">
+                <input type="submit" value="True or False →">
+            
+            </form>
+        </div>  
+            <!-- <div class="user-wrapper">
+                
+            </div>
+          
+          <div id="typed-strings">
+            <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+            <p>It <em>types</em> out sentences.</p>
+          </div>
+          <span id="typed"></span>
+          <script>
+            var typed = new Typed('#typed', {
+              stringsElement: '#typed-strings'
+            });
+          </script> -->
+          
+<div class="user-wrapper">
+    <div class="typing-demo">
+                
+        
+        {%if result=="edgecase" %}
+            <p></p>
+        {% else %}
+            {%if result %}
+            
+            <div id="typed-fake">
+                            <p>There is a {{ prob }}% chance this is FAKE NEWS. YOU LIAR.</p>
+                        </div>
+                        <span id="fakeresults"></span>
+                        <script>
+                            var typed = new Typed('#fakeresults', {
+                              stringsElement: '#typed-fake',
+                              typeSpeed:40
+                            });
+                          </script>
+            {% else %}
+            
+            <div id="typed-real">
+                            <p>There is a {{ prob }}% chance this is REAL NEWS.<br> ^500U.^500S.^500A!!^500 FREEDOM!^500 EAGLES...and shit</p>
+                        </div>
+            <span id="realresults"></span>
+            <script>
+                var typed = new Typed('#realresults', {
+                  stringsElement: '#typed-real',
+                  typeSpeed:40
+                });
+            </script>                
+            {% endif %}
+        {% endif %}
+        </div>
+    </div>
+        
+
+   <script src="{{ url_for('static', filename='main.js') }}"></script>
+    </body>
+</html>
